@@ -16,6 +16,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import { AlbumPhotosComponent } from './album-photos/album-photos.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { AlbumPhotosComponent } from './album-photos/album-photos.component';
       { path: 'albums', component: AlbumsComponent },
       { path: 'albums/:id', component: AlbumDetailComponent },    
       {path: 'albums/:id/photos', component: AlbumPhotosComponent},
+      { path: '**', component: NotFoundComponent}
     ]),
   ],
   declarations: [
@@ -46,7 +48,8 @@ import { AlbumPhotosComponent } from './album-photos/album-photos.component';
     AboutComponent,
     AlbumsComponent,
     AlbumDetailComponent,
-    AlbumPhotosComponent
+    AlbumPhotosComponent,
+    NotFoundComponent
   ],
   bootstrap: [AppComponent],
 })
