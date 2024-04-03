@@ -9,3 +9,10 @@
 
 def common_end(a, b):
     return (len(a) and len(b) >= 1 and a == b or a[0] == b[0] or a[-1] == b[-1])
+
+a = [3, 5, 7]
+b = [1, 7]
+print(a[-1])
+print(b[-1])
+print(common_end(a, b))
+
